@@ -12,14 +12,81 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body>
+<body class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
 
+    <main class="home-bg">
+        <!-- Home Screen -->
+        <section id="home" class="home min-h-screen flex flex-col justify-center items-center text-white">
+            <h1 class="text-9xl">Alpha Clash Pro</h1>
+            <p class="text-4xl my-5">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button onclick="play()" class="btn font-bold text-3xl">Play Now</button>
+        </section>
+        <!-- Play Ground -->
+        <section id="play-ground" class="play-ground hidden flex flex-col gap-20 min-h-full">
+            <div class="items-center flex justify-center mt-20">
+                <div
+                    class="relative flex justify-center bg-[#ffffffB3] border border-[20px] rounded-md border-[#010313CC] w-2/3">
+                    <div class="artboard artboard-horizontal phone-6 flex justify-center ">
+                        <p class="absolute top-0 bg-[#010313CC] p-3 rounded-b-lg
+                        text-white">Don't watch keyboard while playing...</p>
+                        <p class="text-9xl flex justify-center items-center font-bold text-black">Y</p>
+                    </div>
 
-
-
-
-
-
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                </div>
+            </div>
+            <div class="flex justify-evenly mt-8 container mx-auto">
+                <button class="btn btn-active btn-primary rounded-full">Life <img src="images/Button-2.png" alt="">
+                    1</button>
+                <button class="btn btn-active btn-secondary rounded-full">Score <img src="images/Button-1.png" alt="">
+                    2</button>
+            </div>
+        </section>
+        <!-- Score board -->
+        <section class="score hidden">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="text-center bg-[#ffffff33] text-white p-9 rounded-md">
+                    <p class="font-bold text-5xl">Score: 14</p>
+                    <button class="btn px-5 py-2 my-5">Play Again</button>
+                    <p>Practice will make you a Pro</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
     <script src="JS/main.js"></script>
