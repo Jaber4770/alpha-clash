@@ -2,6 +2,10 @@
 document.addEventListener("keyup", function (event) {
     const playerPressed = event.key;
 
+    if(playerPressed === "Escape"){
+        gameOver();
+    }
+
     // get the expected to press
     const currentalphabetElement = document.getElementById("current-alphabet").innerText.toLocaleLowerCase();
     if (playerPressed === currentalphabetElement) {
@@ -48,8 +52,14 @@ function continueGame() {
 }
 
 function play() {
+    // hide everything without playgroud
     hideElementById("home");
+    hideElementById("final-score");
     showElementById("play-ground");
+    // reset the value of life and score
+    setTextElementById("life", 5);
+    setTextElementById("current-Score", 0);
+
     continueGame();
 }
 
@@ -57,4 +67,11 @@ function gameOver() {
     hideElementById("play-ground");
     showElementById("final-score");
 
+    // update the final score of the game
+    const finalScore = getTextElementById("current-Score");
+    setTextElementById("your-score", finalScore);
+
+    // remove last selected key
+    let lastSelectedAlphabet = getElementTextById("current-alphabet");
+    removeBackgroundColorById(lastSelectedAlphabet);
 }

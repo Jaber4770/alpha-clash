@@ -21,7 +21,10 @@ function getTextElementById(elementId) {
 function setTextElementById(elementId, value) {
     let element = document.getElementById(elementId);
     element.innerText = value;
-
+}
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId).innerText;
+    return element;
 }
 function getRandomAlphabet() {
     const alphabetString = "abcdefghijklmnopqrstuvwxyz";
