@@ -70,17 +70,20 @@
                 </div>
             </div>
             <div class="flex justify-evenly mt-8 container mx-auto">
+                <!-- life update -->
                 <button class="btn btn-active btn-primary rounded-full">Life <img src="images/Button-2.png" alt="">
-                    3</button>
-                <button class="btn btn-active btn-secondary rounded-full">Score <img src="images/Button-1.png" alt="">
-                    0</button>
+                    <span id="life">3</span></button>
+                <!-- score update -->
+                    <button class="btn btn-active btn-secondary rounded-full">Score <img src="images/Button-1.png" alt="">
+                    <span id="current-Score">0</span></button>
             </div>
         </section>
         <!-- Score board -->
-        <section class="score hidden">
+        <section id="final-score" class="hidden">
             <div class="flex items-center justify-center min-h-screen">
                 <div class="text-center bg-[#ffffff33] text-white p-9 rounded-md">
-                    <p class="font-bold text-5xl">Score: 14</p>
+                    <h2 class="text-9xl font-bold">Game Over</h2>
+                    <p class="font-bold text-5xl">Score: <span id="your-score" class="text-yellow-500">14</span></p>
                     <button class="btn px-5 py-2 my-5">Play Again</button>
                     <p>Practice will make you a Pro</p>
                 </div>
